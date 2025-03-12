@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SolSmartStreaming</title>
+    <!-- Load Anchor Library locally with the correct path -->
+    <script src="/node_modules/@coral-xyz/anchor/dist/browser/index.js" 
+            onload="console.log('Anchor loaded:', typeof window.anchor !== 'undefined' ? 'Yes' : 'No')"></script>
+</head>
+<body>
+    <h1>SolSmartStreaming</h1>
+    <button onclick="window.payForStream()">Pay for Stream</button>
+    <div id="stream"></div>
+    <!-- Load script.js as a module -->
+    <script type="module" src="./script.js"></script>
+    <!-- Inline script to expose payForStream -->
+    <script type="module">
+        import { payForStream } from './script.js';
+        window.payForStream = async () => {
+            try {
+                await payForStream();
+                console.log("Payment successful!");
+            } catch (error) {
+                console.error("Payment failed:", error);
+                alert("Payment failed: " + error.message);
+            }
+        };
+    </script>
+</body>
+</html>
