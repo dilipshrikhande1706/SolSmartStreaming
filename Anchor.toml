@@ -5,7 +5,7 @@ resolution = true
 skip-lint = false
 
 [programs.devnet]
-streaming_service = "GeShW6zkEbWRZidx4Rcy6Wj2wnGiRUQK1umseuCarNSc"
+streaming_service = "8Htw3BkK7hopp7L7BeoD7NkecGA6QMS6hzp1dppLfuje"
 
 [registry]
 url = "https://api.apr.dev"
